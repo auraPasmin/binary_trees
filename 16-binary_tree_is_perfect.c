@@ -29,7 +29,8 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	return (h_left > h_right ? h_left : h_right);
 }
 /**
- * binary_tree_is_perfect - goes through a binary tree using pre-order traversal
+ * binary_tree_is_perfect - goes through a binary tree using pre-order
+ * traversal
  * @tree: parent of node.
  * Return: nothing.
  */
@@ -40,7 +41,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 	size = (int)binary_tree_size(tree);
-	height = (int)binary_tree_height(tree);
+	height = binary_tree_height(tree);
 	perfect = size == (height * 2) - 1;
 	return (perfect);
 }
